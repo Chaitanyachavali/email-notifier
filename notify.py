@@ -19,7 +19,7 @@ Notify.init("Email Notifier")
 summary = "New email"
 body = "you have new emails"
 image = "/home/chaitanya/Documents/Github/email-notifier/favicon.ico"
-notification = Notify.Notification.new( summary,
+notification = Notify.Notification.new(summary,
     body, image
 )
 # image = GdkPixbuf.Pixbuf.new_from_file("/home/chaitanya/Documents/Github/email-notifier/favicon.ico")
