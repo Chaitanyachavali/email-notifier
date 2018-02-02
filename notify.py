@@ -10,6 +10,7 @@
 import gi
 gi.require_version('Notify', '0.7')
 from gi.repository import Notify, GdkPixbuf
+import time
 
 
 # One time initialization of libnotify
@@ -19,11 +20,16 @@ Notify.init("Email Notifier")
 summary = "New email"
 body = "you have new emails"
 image = "/home/chaitanya/Documents/Github/email-notifier/favicon.ico"
-notification = Notify.Notification.new(summary,
+emailNotification = Notify.Notification.new(summary,
     body, image
 )
 # image = GdkPixbuf.Pixbuf.new_from_file("/home/chaitanya/Documents/Github/email-notifier/favicon.ico")
 # notification.set_icon_from_pixbuf(image)
 # notification.set_image_from_pixbuf(image)
 # Actually show on screen
-notification.show()
+emailNotification.show()
+
+time.sleep(5)
+
+emailNotification.update("New Up", "up up", image)
+emailNotification.show()
