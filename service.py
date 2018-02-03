@@ -10,8 +10,8 @@ import subprocess
 DEBUG = True
 
 HOSTNAME = 'imap.gmail.com'
-USERNAME = 'chavalichaithanyachinna@gmail.com'
-PASSWORD = 'chavali@chinna'
+USERNAME = ''
+PASSWORD = ''
 MAILBOX = 'Inbox'
 
 NEWMAIL_OFFSET = 0
