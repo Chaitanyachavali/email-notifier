@@ -10,8 +10,8 @@ import subprocess
 DEBUG = True
 
 HOSTNAME = 'imap.gmail.com'
-USERNAME = 'chavalichaithanyachinna@gmail.com'
-PASSWORD = 'chavali@chinna'
+USERNAME = ''
+PASSWORD = ''
 MAILBOX = 'Inbox'
 
 NEWMAIL_OFFSET = 0
@@ -24,11 +24,12 @@ def notifyUser(emailCount):
     global NOTIFY_IMAGE
     Notify.init("Email Notifier")
     emailNotification = Notify.Notification.new("INIT", "INIT", NOTIFY_IMAGE)
-    emailNotification.show()
-    print("Notifying")
+    # emailNotification.show()
+    if DEBUG:
+        print("Notifying")
     checkTag = 'mail' if emailCount == 1 else 'mails'
     headTag = "Hey there! New " + checkTag + " for you"
-    bodyTag = "You have " + str(emailCount) + " new " + checkTag + " in your mailbox"
+    bodyTag = "You have " + str(emailCount) + " new " + checkTag + " in your mailbox @chavalichaithanyachinna"
     emailNotification.update(headTag, bodyTag, NOTIFY_IMAGE)
     emailNotification.show()
     time.sleep(5)
